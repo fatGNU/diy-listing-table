@@ -1,0 +1,148 @@
+@keyframes inset-box-shadow {
+    from {
+        box-shadow: 0px 1px 0px 0px #EBEBEB inset;
+    }
+    to {
+        box-shadow: 0px 1px 16px 42px #EBEBEB inset;
+    }
+}
+
+.tableViewContainer {
+    height: 80vh;
+    width: 80vw;
+    margin-left: 4em;
+    border: 1px solid blue;
+}
+
+.table {
+    user-select: none;
+    -moz-user-select: none;
+    text-align: center;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border: 3px solid #ddd;
+    /*width: 100%;*/
+    /*max-width: 100vw;*/
+}
+
+.table-row-header {
+    background: #460046;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-Transform: capitalize;
+    cursor: default;
+}
+
+.table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tr:hover {
+    background-color: #ddd;
+}
+
+.tr-no-hover {
+    pointer-events: none;
+}
+
+.table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #460046;
+    color: white;
+}
+
+.search-box {
+    /* position: relative; */
+    float: right;
+    font-size: 1.4em;
+}
+
+.search-box .input-group {
+    min-width: 300px;
+    position: absolute;
+    right: 0;
+}
+
+.search-box .input-group-addon,
+.search-box input {
+    border-color: #ddd;
+    border-radius: 0;
+}
+
+.search-box input {
+    /* height: 34px; */
+    /* padding-right: 35px; */
+    background: #f4fcfd;
+    border: none;
+    border-radius: 2px !important;
+}
+
+.search-box input:focus {
+    background: #fff;
+}
+
+.search-box input::placeholder {
+    font-style: italic;
+}
+
+.search-box .input-group-addon {
+    /* min-width: 35px; */
+    border: none;
+    background: transparent;
+    /* position: absolute; */
+    /* right: 0;
+    padding: 6px 0; */
+}
+
+.search-box i {
+    color: #a0a5b1;
+    font-size: 19px;
+    /* position: relative; */
+    /* top: 2px; */
+}
+
+/****************************************************/
+/****************pagination tools**************/
+/****************************************************/
+.paginator-control-bar {
+    display: flex;
+    width: fit-content;
+    bottom: -20px;
+    height: auto;
+    padding: 0;
+    /*border: 1px solid #d3d3d8;*/
+    overflow-x: scroll;
+    scrollbar-width: none;
+    background: #FFFFFF;
+    /*scrollbar-width: thin;!*show it for now to see if the paginator works*!*/
+}
+
+.paginator-control-box {
+    padding: 4px;
+    font-size: 14px;
+    color: #4565e3;
+    border: 1px solid #d3d3d8;
+    border-left-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    width: 30px;
+    height: 30px;
+}
+
+.paginator-control-box:hover {
+    /*perform an animation for box shadow inset*/
+    animation: inset-box-shadow forwards linear 0.3s;
+}
+
+.paginator-control-box-active {
+    border-bottom: 2px solid #460046;
+    color: #460046;
+    box-shadow: 0 1px 16px 42px #EBEBEB inset;
+}
